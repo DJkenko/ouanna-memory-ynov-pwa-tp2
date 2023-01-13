@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
+import Timer from './components/Timer'
 
 const cardImages = [
   { "src": "/img/helmet-1.png", matched: false },
@@ -67,7 +68,7 @@ function App() {
     <div className="App">
       <h1>Memory PWA</h1>
       <button onClick={shuffleCards}>New Game</button>
-      
+      <Timer secondes={60}/>
       <div className='card-grid'>
         {cards.map(card => (
           <SingleCard 
